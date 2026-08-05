@@ -1,0 +1,54 @@
+set(SOURCES
+    FEMSolver.cpp
+    FEMSolver.hpp
+    Solver.cpp
+    Solver.hpp
+    AMGCL.cpp
+    AMGCL.hpp
+    CuSolverDN.cu
+    CuSolverDN.cuh
+    EigenSolver.hpp
+    EigenSolver.tpp
+    HypreSolver.cpp
+    HypreSolver.hpp
+    Pardiso.cpp
+    Pardiso.hpp
+    SaddlePointSolver.cpp
+    SaddlePointSolver.hpp
+    Hybrid.cpp
+    Hybrid.hpp
+)
+
+if(POLYSOLVE_WITH_CUDA)
+    list(APPEND SOURCES
+        CUDSS.cpp
+        CUDSS.hpp
+        GPUHybrid.cu
+        GPUHybrid.hpp
+        MASSolver.cu
+        MASSolver.hpp
+        mas_utils/BSRAdjacency.cu
+        mas_utils/BSRAdjacency.hpp
+        mas_utils/BSRMatrix.cu
+        mas_utils/BSRMatrix.hpp
+        mas_utils/BadDOFPreconditioner.cu
+        mas_utils/BadDOFPreconditioner.hpp
+        mas_utils/BadDofGMMPreconditioner.cu
+        mas_utils/BadDofGMMPreconditioner.hpp
+        mas_utils/BadDofKMeanPreconditioner.cu
+        mas_utils/BadDofKMeanPreconditioner.hpp
+        mas_utils/CuSparseWrapper.hpp
+        mas_utils/CuDSSWrapper.hpp
+        mas_utils/CudaUtils.cuh
+        mas_utils/InnerProduct.cu
+        mas_utils/InnerProduct.hpp
+        mas_utils/MASPreconditioner.cu
+        mas_utils/MASPreconditioner.hpp
+        mas_utils/GraphPartition.cpp
+        mas_utils/GraphPartition.hpp
+    )
+
+endif()
+
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" PREFIX "Source Files" FILES ${SOURCES})
+target_sources(polysolve_linear PRIVATE ${SOURCES})

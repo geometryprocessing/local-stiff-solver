@@ -1,0 +1,853 @@
+[
+    {
+        "pointer": "/",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "enable_overwrite_solver",
+            "solver",
+            "precond",
+            "Eigen::LeastSquaresConjugateGradient",
+            "Eigen::DGMRES",
+            "Eigen::ConjugateGradient",
+            "Eigen::BiCGSTAB",
+            "Eigen::GMRES",
+            "Eigen::MINRES",
+            "Pardiso",
+            "Hypre",
+            "AMGCL",
+            "MAS",
+            "CUDSS",
+            "Hybrid",
+            "GPUHybrid"
+        ],
+        "doc": "Settings for the linear solver."
+    },
+    {
+        "pointer": "/enable_overwrite_solver",
+        "default": false,
+        "type": "bool",
+        "doc": "If solver name is not present, falls back to default"
+    },
+    {
+        "pointer": "/solver",
+        "default": "",
+        "type": "string",
+        "doc": "Linear solver type.",
+        "options": [
+            "Eigen::SimplicialLDLT",
+            "Eigen::SparseLU",
+            "Eigen::CholmodSupernodalLLT",
+            "Eigen::UmfPackLU",
+            "Eigen::SuperLU",
+            "Eigen::PardisoLDLT",
+            "Eigen::PardisoLLT",
+            "Eigen::PardisoLU",
+            "Pardiso",
+            "Hypre",
+            "AMGCL",
+            "Eigen::LeastSquaresConjugateGradient",
+            "Eigen::DGMRES",
+            "Eigen::ConjugateGradient",
+            "Eigen::BiCGSTAB",
+            "Eigen::GMRES",
+            "Eigen::MINRES",
+            "MAS",
+            "CUDSS",
+            "Hybrid",
+            "GPUHybrid"
+        ]
+    },
+    {
+        "pointer": "/precond",
+        "default": "",
+        "type": "string",
+        "doc": "Preconditioner used if using an iterative linear solver.",
+        "options": [
+            "Eigen::IdentityPreconditioner",
+            "Eigen::DiagonalPreconditioner",
+            "Eigen::IncompleteCholesky",
+            "Eigen::LeastSquareDiagonalPreconditioner",
+            "Eigen::IncompleteLUT"
+        ]
+    },
+    {
+        "pointer": "/Eigen::LeastSquaresConjugateGradient",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's Least Squares Conjugate Gradient solver."
+    },
+    {
+        "pointer": "/Eigen::DGMRES",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's DGMRES solver."
+    },
+    {
+        "pointer": "/Eigen::ConjugateGradient",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's Conjugate Gradient solver."
+    },
+    {
+        "pointer": "/Eigen::BiCGSTAB",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's BiCGSTAB solver."
+    },
+    {
+        "pointer": "/Eigen::GMRES",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's GMRES solver."
+    },
+    {
+        "pointer": "/Eigen::MINRES",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "tolerance"
+        ],
+        "doc": "Settings for the Eigen's MINRES solver."
+    },
+    {
+        "pointer": "/Pardiso",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "mtype"
+        ],
+        "doc": "Settings for the Pardiso solver."
+    },
+    {
+        "pointer": "/Hypre",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "pre_max_iter",
+            "tolerance",
+            "theta",
+            "nodal_coarsening",
+            "interp_rbms",
+            "dimension"
+        ],
+        "doc": "Settings for the Hypre solver."
+    },
+    {
+        "pointer": "/AMGCL",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "solver",
+            "precond"
+        ],
+        "doc": "Settings for the AMGCL solver."
+    },
+    {
+        "pointer": "/Eigen::LeastSquaresConjugateGradient/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::LeastSquaresConjugateGradient/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Eigen::DGMRES/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::DGMRES/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Eigen::ConjugateGradient/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::ConjugateGradient/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Eigen::BiCGSTAB/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::BiCGSTAB/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Eigen::GMRES/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::GMRES/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Eigen::MINRES/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Eigen::MINRES/tolerance",
+        "default": 1e-12,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Pardiso/mtype",
+        "default": 11,
+        "type": "int",
+        "options": [
+            1,
+            2,
+            -2,
+            3,
+            4,
+            -4,
+            6,
+            11,
+            13
+        ],
+        "doc": "Matrix type."
+    },
+    {
+        "pointer": "/Hypre/max_iter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Hypre/pre_max_iter",
+        "default": 1,
+        "type": "int",
+        "doc": "Maximum number of pre iterations."
+    },
+    {
+        "pointer": "/Hypre/tolerance",
+        "default": 1e-10,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/Hypre/theta",
+        "default": 0.5,
+        "type": "float",
+        "doc": "Strong threshold."
+    },
+    {
+        "pointer": "/Hypre/interp_rbms",
+        "default": false,
+        "type": "bool",
+        "doc": "Whether or not to interp rbms."
+    },
+    {
+        "pointer": "/Hypre/nodal_coarsening",
+        "default": false,
+        "type": "bool",
+        "doc": "Whether or not to include nodal coarsening options."
+    },
+    {
+        "pointer": "/Hypre/dimension",
+        "default": 1,
+        "type": "int",
+        "doc": "Dimension of problem."
+    },
+    {
+        "pointer": "/AMGCL/solver",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "tol",
+            "maxiter",
+            "type"
+        ],
+        "doc": "Solver settings for the AMGCL."
+    },
+    {
+        "pointer": "/AMGCL/precond",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "relax",
+            "class",
+            "max_levels",
+            "direct_coarse",
+            "ncycle",
+            "coarsening"
+        ],
+        "doc": "Preconditioner settings for the AMGCL."
+    },
+    {
+        "pointer": "/AMGCL/solver/maxiter",
+        "default": 1000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/AMGCL/solver/tol",
+        "default": 1e-10,
+        "type": "float",
+        "doc": "Convergence tolerance."
+    },
+    {
+        "pointer": "/AMGCL/solver/type",
+        "default": "cg",
+        "type": "string",
+        "doc": "Type of solver to use."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "degree",
+            "type",
+            "power_iters",
+            "higher",
+            "lower",
+            "scale"
+        ],
+        "doc": "Preconditioner settings for the AMGCL."
+    },
+    {
+        "pointer": "/AMGCL/precond/class",
+        "default": "amg",
+        "type": "string",
+        "doc": "Type of preconditioner to use."
+    },
+    {
+        "pointer": "/AMGCL/precond/max_levels",
+        "default": 6,
+        "type": "int",
+        "doc": "Maximum number of levels."
+    },
+    {
+        "pointer": "/AMGCL/precond/direct_coarse",
+        "default": false,
+        "type": "bool",
+        "doc": "Use direct solver for the coarsest level."
+    },
+    {
+        "pointer": "/AMGCL/precond/ncycle",
+        "default": 2,
+        "type": "int",
+        "doc": "Number of cycles."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "type",
+            "estimate_spectral_radius",
+            "relax",
+            "aggr"
+        ],
+        "doc": "Coarsening parameters."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/degree",
+        "default": 16,
+        "type": "int",
+        "doc": "Degree of the polynomial."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/type",
+        "default": "chebyshev",
+        "type": "string",
+        "doc": "Type of relaxation to use."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/power_iters",
+        "default": 100,
+        "type": "int",
+        "doc": "Number of power iterations."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/higher",
+        "default": 2,
+        "type": "float",
+        "doc": "Higher level relaxation."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/lower",
+        "default": 0.008333333333,
+        "type": "float",
+        "doc": "Lower level relaxation."
+    },
+    {
+        "pointer": "/AMGCL/precond/relax/scale",
+        "default": true,
+        "type": "bool",
+        "doc": "Scale."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening/type",
+        "default": "smoothed_aggregation",
+        "type": "string",
+        "doc": "Coarsening type."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening/estimate_spectral_radius",
+        "default": true,
+        "type": "bool",
+        "doc": "Should the spectral radius be estimated."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening/relax",
+        "default": 1,
+        "type": "float",
+        "doc": "Coarsening relaxation."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening/aggr",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "eps_strong"
+        ],
+        "doc": "Aggregation settings."
+    },
+    {
+        "pointer": "/AMGCL/precond/coarsening/aggr/eps_strong",
+        "default": 0,
+        "type": "float",
+        "doc": "Aggregation epsilon strong."
+    },
+    {
+        "pointer": "/CUDSS",
+        "default": null,
+        "type": "object",
+        "optional": [
+        ],
+        "doc": "Settings for the cuDSS solver."
+    },
+    {
+        "pointer": "/Hybrid",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "relative_tolerance",
+            "absolute_tolerance",
+            "block_size",
+            "theta",
+            "do_hybrid_precond",
+            "select_bad_dofs_from_l1_norm",
+            "gmm_jump_threshold",
+            "gmm_tol",
+            "max_gmm_iterations",
+            "conditioning_threshold",
+            "decompose_subdomains",
+            "min_subdomain_size",
+            "max_subdomain_size",
+            "expand_subdomains",
+            "use_incomplete_cholesky_precond",
+            "rho"
+        ],
+        "doc": "Settings for the Hybrid solver."
+    },
+    {
+        "pointer": "/GPUHybrid",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "max_iter",
+            "relative_tolerance",
+            "absolute_tolerance",
+            "block_size",
+            "theta",
+            "do_hybrid_precond",
+            "select_bad_dofs_from_l1_norm",
+            "gmm_jump_threshold",
+            "gmm_tol",
+            "max_gmm_iterations",
+            "conditioning_threshold",
+            "decompose_subdomains",
+            "min_subdomain_size",
+            "max_subdomain_size",
+            "expand_subdomains",
+            "max_dense_size",
+            "use_float_on_subdomains"
+        ],
+        "doc": "Settings for the GPU Hybrid solver."
+    },
+    {
+        "pointer": "/MAS",
+        "default": null,
+        "type": "object",
+        "optional": [
+            "block_dim",
+            "max_iter",
+            "relative_tolerance",
+            "absolute_tolerance",
+            "lazy_partitioning",
+            "use_preconditioned_residual_norm",
+            "use_bad_dof_precond",
+            "bad_dof_strategy",
+            "bad_dof_kmeans_search_fraction",
+            "bad_dof_kmeans_jump_threshold",
+            "bad_dof_kmeans_max_iterations",
+            "bad_dof_kmeans_expand_neighbors",
+            "bad_dof_gmm_jump_threshold",
+            "bad_dof_gmm_tol",
+            "bad_dof_gmm_max_iterations",
+            "bad_dof_gmm_expand_neighbors"
+        ],
+        "doc": "Settings for the MAS solver."
+    },
+    {
+        "pointer": "/Hybrid/max_iter",
+        "default": 10000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/Hybrid/relative_tolerance",
+        "default": 1e-10,
+        "type": "float",
+        "doc": "Relative convergence tolerance"
+    },
+    {
+        "pointer": "/Hybrid/absolute_tolerance",
+        "default": 0.0,
+        "type": "float",
+        "doc": "Absolute convergence tolerance"
+    },
+    {
+        "pointer": "/Hybrid/block_size",
+        "default": 1,
+        "type": "int",
+        "doc": "Block size for the hybrid solver."
+    },
+    {
+        "pointer": "/Hybrid/theta",
+        "default": 0.5,
+        "type": "float",
+        "doc": "Strong threshold."
+    },
+    {
+        "pointer": "/Hybrid/do_hybrid_precond",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to do hybrid preconditioning."
+    },
+    {
+        "pointer": "/Hybrid/select_bad_dofs_from_l1_norm",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to select bad DoFs from row norm (if false, the problem-dependent ones are used)."
+    },
+    {
+        "pointer": "/Hybrid/conditioning_threshold",
+        "default": 100.0,
+        "type": "float",
+        "doc": "Conditioning threshold used for filtering."
+    },
+    {
+        "pointer": "/Hybrid/gmm_jump_threshold",
+        "default": 100.0,
+        "type": "float",
+        "doc": "GMM jump threshold."
+    },
+    {
+        "pointer": "/Hybrid/gmm_tol",
+        "default": 1e-3,
+        "type": "float",
+        "doc": "GMM convergence tolerance."
+    },
+    {
+        "pointer": "/Hybrid/max_gmm_iterations",
+        "default": 20,
+        "type": "int",
+        "doc": "GMM max iters."
+    },
+    {
+        "pointer": "/Hybrid/decompose_subdomains",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to decompose subdomains into independent clusters."
+    },
+    {
+        "pointer": "/Hybrid/min_subdomain_size",
+        "default": 1,
+        "type": "int",
+        "doc": "Minimum subdomain size."
+    },
+    {
+        "pointer": "/Hybrid/max_subdomain_size",
+        "default": 10000000,
+        "type": "int",
+        "doc": "Maximum subdomain size."
+    },
+    {
+        "pointer": "/Hybrid/expand_subdomains",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to expand subdomains by including neighboring DoFs."
+    },
+    {
+        "pointer": "/Hybrid/use_incomplete_cholesky_precond",
+        "default": false,
+        "type": "bool",
+        "doc": "Whether or not to use incomplete Cholesky as global preconditioner"
+    },
+    {
+        "pointer": "/Hybrid/rho",
+        "default": 3.25,
+        "type": "float",
+        "doc": "Sparsity parameter for incomplete Cholesky."
+    },
+    {
+        "pointer": "/GPUHybrid/max_iter",
+        "default": 10000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/GPUHybrid/relative_tolerance",
+        "default": 1e-10,
+        "type": "float",
+        "doc": "Relative convergence tolerance"
+    },
+    {
+        "pointer": "/GPUHybrid/absolute_tolerance",
+        "default": 0.0,
+        "type": "float",
+        "doc": "Absolute convergence tolerance"
+    },
+    {
+        "pointer": "/GPUHybrid/block_size",
+        "default": 1,
+        "type": "int",
+        "doc": "Block size for the hybrid solver."
+    },
+    {
+        "pointer": "/GPUHybrid/theta",
+        "default": 0.5,
+        "type": "float",
+        "doc": "Strong threshold."
+    },
+    {
+        "pointer": "/GPUHybrid/do_hybrid_precond",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to do hybrid preconditioning."
+    },
+    {
+        "pointer": "/GPUHybrid/select_bad_dofs_from_l1_norm",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to select bad DoFs from row norm (if false, the problem-dependent ones are used)."
+    },
+    {
+        "pointer": "/GPUHybrid/conditioning_threshold",
+        "default": 100.0,
+        "type": "float",
+        "doc": "Conditioning threshold used for filtering."
+    },
+    {
+        "pointer": "/GPUHybrid/gmm_jump_threshold",
+        "default": 100.0,
+        "type": "float",
+        "doc": "GMM jump threshold."
+    },
+    {
+        "pointer": "/GPUHybrid/gmm_tol",
+        "default": 1e-3,
+        "type": "float",
+        "doc": "GMM convergence tolerance."
+    },
+    {
+        "pointer": "/GPUHybrid/max_gmm_iterations",
+        "default": 20,
+        "type": "int",
+        "doc": "GMM max iters."
+    },
+    {
+        "pointer": "/GPUHybrid/decompose_subdomains",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to decompose subdomains into independent clusters."
+    },
+    {
+        "pointer": "/GPUHybrid/min_subdomain_size",
+        "default": 1,
+        "type": "int",
+        "doc": "Minimum subdomain size."
+    },
+    {
+        "pointer": "/GPUHybrid/max_subdomain_size",
+        "default": 10000000,
+        "type": "int",
+        "doc": "Maximum subdomain size."
+    },
+    {
+        "pointer": "/GPUHybrid/expand_subdomains",
+        "default": true,
+        "type": "bool",
+        "doc": "Whether or not to expand subdomains by including neighboring DoFs."
+    },
+    {
+        "pointer": "/GPUHybrid/max_dense_size",
+        "default": 0,
+        "type": "int",
+        "doc": "Maximum size for using dense inverse on subdomains."
+    },
+    {
+        "pointer": "/GPUHybrid/use_float_on_subdomains",
+        "default": false,
+        "type": "bool",
+        "doc": "Whether or not to precondition subdomains in single precision."
+    },
+    {
+        "pointer": "/MAS/block_dim",
+        "default": 1,
+        "type": "int",
+        "options": [
+            1,
+            2,
+            3
+        ],
+        "doc": "Block size of the BSR matrix PCG sovler internally use. Choose 3 for 3d problem, 2 for 2d, etc."
+    },
+    {
+        "pointer": "/MAS/max_iter",
+        "default": 10000,
+        "type": "int",
+        "doc": "Maximum number of iterations."
+    },
+    {
+        "pointer": "/MAS/relative_tolerance",
+        "default": 0.0,
+        "type": "float",
+        "doc": "Relative convergence tolerance."
+    },
+    {
+        "pointer": "/MAS/absolute_tolerance",
+        "default": 1e-8,
+        "type": "float",
+        "doc": "Absolute convergence tolerance."
+    },
+    {
+        "pointer": "/MAS/lazy_partitioning",
+        "default": true,
+        "type": "bool",
+        "doc": "If true, reuse the first graph partition."
+    },
+    {
+        "pointer": "/MAS/use_preconditioned_residual_norm",
+        "default": false,
+        "type": "bool",
+        "doc": "Use preconditioned residual norm for termination check."
+    },
+    {
+        "pointer": "/MAS/use_bad_dof_precond",
+        "default": false,
+        "type": "bool",
+        "doc": "Enable an additive bad-DoF cuDSS correction on top of MAS."
+    },
+    {
+        "pointer": "/MAS/bad_dof_strategy",
+        "default": "elbow",
+        "type": "string",
+        "options": [
+            "elbow",
+            "kmean",
+            "gmm"
+        ],
+        "doc": "Bad-DOF detection strategy used when use_bad_dof_precond is enabled."
+    },
+    {
+        "pointer": "/MAS/bad_dof_kmeans_search_fraction",
+        "default": 0.2,
+        "type": "float",
+        "doc": "Fraction of largest abs(diag) entries to cluster."
+    },
+    {
+        "pointer": "/MAS/bad_dof_kmeans_jump_threshold",
+        "default": 10.0,
+        "type": "float",
+        "doc": "Threshold for cluster centroid ratio jump"
+    },
+    {
+        "pointer": "/MAS/bad_dof_kmeans_max_iterations",
+        "default": 32,
+        "type": "int",
+        "doc": "Maximum k-means iterations"
+    },
+    {
+        "pointer": "/MAS/bad_dof_kmeans_expand_neighbors",
+        "default": 128,
+        "type": "int",
+        "doc": "Expand each selected bad-DoF by including this many neighboring indices in the partition-sorted ordering (0 disables)."
+    },
+    {
+        "pointer": "/MAS/bad_dof_gmm_jump_threshold",
+        "default": 10.0,
+        "type": "float",
+        "doc": "Threshold for GMM high/low row-norm mean ratio."
+    },
+    {
+        "pointer": "/MAS/bad_dof_gmm_tol",
+        "default": 1e-3,
+        "type": "float",
+        "doc": "GMM convergence tolerance."
+    },
+    {
+        "pointer": "/MAS/bad_dof_gmm_max_iterations",
+        "default": 20,
+        "type": "int",
+        "doc": "Maximum GMM iterations."
+    },
+    {
+        "pointer": "/MAS/bad_dof_gmm_expand_neighbors",
+        "default": 16,
+        "type": "int",
+        "doc": "Expand each selected bad-DoF by including this many neighboring indices in the partition-sorted ordering (0 disables)."
+    }
+]

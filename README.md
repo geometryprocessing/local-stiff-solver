@@ -53,16 +53,16 @@ We include two example matrices `mats/` for quick testing, one from a contact pr
 ```bibtex
 @inproceedings{Paik:2026:PALSS,
   title     = {A Purely Algebraic Solver for Locally Stiff Linear Systems},
-  author    = {Paik, Maxwell, and Su, Ian, and Kusupati, Uday, and Kolev, Tzanio, and Panozzo, Daniele, and Zorin, Denis},
+  author    = {Paik, Maxwell, and Su, Tzu Hsiang, and Kusupati, Uday, and Kolev, Tzanio, and Panozzo, Daniele, and Zorin, Denis},
   year      = {2026},
-  isbn      = {TODO},
+  isbn      = {9798400728426},
   publisher = {Association for Computing Machinery},
   address   = {New York, NY, USA},  
   month     = nov,
-  series    = {TODO},
-  booktitle = {TODO},
-  articleno = {TODO},
-  numpages = {TODO},
-  doi       = {TODO}
+  series    = {SA Conference Papers ’26},
+  booktitle = {SIGGRAPH Asia 2026 Conference Papers (SA Conference Papers '26), December 01--04, 2026, Kuala Lumpur, Malaysia},
+  articleno = {91},
+  numpages = {10},
+  doi       = {10.1145/3829340.3842242}
 }
 ```

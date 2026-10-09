@@ -53,7 +53,7 @@ We include two example matrices `mats/` for quick testing, one from a contact pr
 ```bibtex
 @inproceedings{Paik:2026:PALSS,
   title     = {A Purely Algebraic Solver for Locally Stiff Linear Systems},
-  author    = {Paik, Maxwell, and Su, Tzu Hsiang, and Kusupati, Uday, and Kolev, Tzanio, and Panozzo, Daniele, and Zorin, Denis},
+  author    = {Paik, Maxwell and Su, Tzu Hsiang and Kusupati, Uday and Kolev, Tzanio and Panozzo, Daniele and Zorin, Denis},
   year      = {2026},
   isbn      = {9798400728426},
   publisher = {Association for Computing Machinery},
